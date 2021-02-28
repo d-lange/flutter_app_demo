@@ -26,6 +26,7 @@ class _RandomWordsState extends State<RandomWords> {
   final _biggerFont = const TextStyle(fontSize: 18.0);
 
   //favorite feature
+
   final _saved = Set<WordPair>();
 
   Widget _buildSuggestions() {
@@ -46,9 +47,8 @@ class _RandomWordsState extends State<RandomWords> {
   }
 
   Widget _buildRow(WordPair pair) {
-    //favorite feature
-    final alreadySaved = _saved.contains(pair);
 
+    final alreadySaved = _saved.contains(pair);
     return ListTile(
       title: Text(
         pair.asPascalCase,
